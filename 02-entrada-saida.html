@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada e saída</title>
+    <script>
+        //Obtendo uma informa do usuário (entrada)
+        let num1 = Number(prompt( 'Informe um némero'))
+        let num2 = Number(prompt('Informe outro numero'))
+
+        //isNan() verificar se o resultado de Number() deu Nan
+        if(isNaN(num1)) {
+            alert('ERRO: você não digitou um número!')
+        }
+        else if(isNaN(num2)) {
+            alert('ERRO: o segundo valor informado não é um número!')
+        }
+        else {
+            let soma = num1 + num2
+        
+            //Exibindo as informações para o usuário (saída)
+            alert('A soma dos dois números é ' + soma)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
