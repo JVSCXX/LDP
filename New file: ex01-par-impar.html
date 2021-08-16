@@ -11,7 +11,18 @@
             prompt(). Determine se o número digitado é par
             ou ímpar e informe ao usuário usando alert().
         */
-       let num1 = Number (prompt)("Fale um número e ")
+       let num = parseInt(prompt('Fale um número interiro: '))
+
+       if(isNaN(num)) { 
+           alert('ERRO: o valor informado não é um número interiro!')
+       }
+       else if (num % 2 === 0) {
+           alert('O número informado ('+ num +') é PAR.')
+       }
+       else {
+           alert('O número informado ('+ num +') é IMPAR.')
+       }
+
     </script>
 </head>
 <body>
