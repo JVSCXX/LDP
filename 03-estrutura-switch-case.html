@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,6 +27,7 @@ e informe o resultado usando document.write().
         let num1 = Number(prompt('Informe o primeiro número:'))
         let num2 = parseFloat(prompt('Informe o segundo número'))
         let oper = prompt('informe um operador (+ - * X x / :):')
+        let resultado 
 
         //Validaçao dos números
         if(isNaN(num1) || isNaN(num2)) {
@@ -35,21 +36,35 @@ e informe o resultado usando document.write().
         else {
             switch(oper) {
                 case '+':
-                    document.write(num1 + num2)
+                    resultado = num1 + num2
                     break
 
                 case '-':
-                    document.write(num1 - num2)
+                    resultado = num1 - num2
                     break
 
                 case 'x':
                 case 'X': //case vazia
                 case '*':
-                    document.write(num1 / num2)
+                    resultado = num1 * num2
+                    break
+
+                case '/':
+                case ':':
+                    resultado = num1 / num2
                     break
 
                 default:  // "else" do switch
                     alert('ERRO: operador invalido!')
+            }
+        }
+
+        if(resultado !== undefined){
+            document.write(`${num1} ${oper} ${num2} é igual a ${resultado}`)
+        }
+        
+    
+
             /*
         }
         else if(oper === '+') {
